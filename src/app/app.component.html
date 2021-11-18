@@ -1,33 +1,20 @@
 <div class="container">
-  <div class="row g-3">
-    <div class="col-12 col-sm-auto">
-      <label for="range">Range Input</label>
-    </div>
+  <div class="row g-3 somu">
+     
     <div class="col-12 col-sm-6">
-      <input
-        type="number"
-        name="range"
-        id="range"
-        #range
-        class="form-control"
-        min="0"
-      />
+      <input type="text" class="form-control" id="name" placeholder="Input Range" [(ngModel)]="value" required>
     </div>
-    <div class="col-12 col-sm-auto">
+    <div class="co  l-12 col-sm-auto">
       <button
         class="btn btn-primary"
         type="button"
-        (click)="findPrimes(range.value)"
-      >
-        Submit
-      </button>
+        (click)="findPrimes(value)">Submit</button>
     </div>
   </div>
-  <div class="row mt-5" *ngIf="show">
-    <div class="col-auto">
-      <p>Checking Primes from 1 to {{ range.value }}</p>
-      <p>Prime Count: {{ primes.length }}</p>
-      <p>Run Time: {{ runTime | formatTime }}</p>
-    </div>
-  </div>
+  <app-disply *ngIf="show"
+   [primesP]="primes"
+   [runTimeP]="runTime"
+   [valueP]="value"
+   >
+  </app-disply>
 </div>

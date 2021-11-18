@@ -1,7 +1,13 @@
 .container {
   margin-top: 3rem;
+  margin: 100px;
+  width: 500px;
+  border: solid 2px;
+  background-color: blanchedalmond;
 }
-
+.somu {
+  padding: 30px;
+}
 p {
   margin-bottom: 0.5rem;
 }

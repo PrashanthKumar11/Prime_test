@@ -9,12 +9,13 @@ export class AppComponent implements OnInit {
   public primes: number[] = [];
   public runTime!: number;
   public show: boolean = false;
+  public value!:any;
 
   constructor() {}
 
   ngOnInit() {}
 
-  findPrimes(value: string) {
+ public findPrimes(value:any) {
     const num = +value;
     this.primes = [];
     this.show = false;
@@ -32,7 +33,7 @@ export class AppComponent implements OnInit {
     console.log(this.runTime);
   }
 
-  isPrime(num: number): boolean {
+public  isPrime(num: number): boolean {
     if (num < 2) {
       return false;
     }
@@ -42,7 +43,6 @@ export class AppComponent implements OnInit {
         return false;
       }
     }
-
     return true;
   }
 }
